@@ -18,6 +18,9 @@ __Setup Steps__
 ```
 git clone https://github.com/boxen/our-boxen /opt/boxen/repo
 cd /opt/boxen/repo
+git remote rm origin
+git remote add origin git@github.com:tcarmean/my-boxen.git 
+git push -u origin master
 script/boxen --no-fde
 ```
 This seems to pull in a bunch of stuff and sets up ~/src/our-boxen which appears to be where custom configurations on top of the defaults are meant to go. It appears that ~/src/our-boxen is a symlink to /opt/boxen/repo. 
