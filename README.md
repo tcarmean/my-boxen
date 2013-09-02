@@ -7,8 +7,11 @@ This repo will initially be a collection of notes and links to wrap my head arou
 
 __TODO List__
 
-1. Figure out how to replace the OS X stock equivalent of coreutils with the GNU variants (OS X shouldn't hide symlinks from the user). As a linux user, the default command line tools are lacking to say the least.
+1. Figure out how to replace the OS X stock equivalent of coreutils with the GNU variants (OS X shouldn't hide symlinks from the user). As a linux user, the default command line tools are lacking to say the least. - DONE (see below)
 2. Fork /opt/boxen/repo into my_boxen (this will likely cause script/boxen to complain about uncommited changes) - DONE but to my-boxen which is where you're reading this...
+3. Automate/write a boxen recipe that uses puppet to call homebrew to install python
+4. Automate/write a boxen recipe that uses puppet to call homebrew to install scapy
+5. Automate/write a boxen recipe that uses puppet to call homebrew to install the GNU utils
 
 __Setup Steps__
 
@@ -56,3 +59,9 @@ brew install scapy
 ```
 
 This gets me a broken environment. Apparently homebrew didn't install all of the deps for scapy (this is a bit weird as it DID get me something usable outside of boxen).
+
+To get the GNU set of tools in hopes that the command line will become a bit more like I'm used to from linux:
+
+```
+brew install coreutils findutils gnu-tar gnu-sed gawk gnutls gnu-indent gnu-getopt
+```
