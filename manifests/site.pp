@@ -75,6 +75,14 @@ node default {
   include ruby::1_9_3
   include ruby::2_0_0
 
+	# pull in custom packages that we added in puppetfile
+	include	macvim
+	include	alfred
+	include	virtualbox
+	include	iterm2
+	include	dropbox
+	include	chrome
+
   # common, useful packages
   package {
     [
