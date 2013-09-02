@@ -34,4 +34,25 @@ Gemfile.lock    Puppetfile.lock config          log             script
 LICENSE         README.md       docs            manifests       shared
 ```
 
+At this point you can edit Puppetfile to add things you might like:
 
+```
+# Optional/custom modules. There are tons available at
+# https://github.com/boxen.
+github "python",        "1.2.1"
+```
+
+I found that the above did absolutely nothing to get me a newer python install, but the following worked as you'd expect:
+
+```
+brew install python
+```
+
+To get scapy:
+
+```
+brew tap samueljohn/python
+brew install scapy
+```
+
+This gets me a broken environment. Apparently homebrew didn't install all of the deps for scapy (this is a bit weird as it DID get me something usable outside of boxen).
