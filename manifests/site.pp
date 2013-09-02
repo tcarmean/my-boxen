@@ -79,9 +79,9 @@ node default {
 	include	macvim
 	include	alfred
 	include	virtualbox
-	include	iterm2
+#	include	iterm2
 	include	dropbox
-	include	chrome
+	include	chrome::stable
 
   # common, useful packages
   package {
