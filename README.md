@@ -19,7 +19,10 @@ Homebrew::Formula <| |> -> Package <| |>
 ```
 
 __Setup Steps__
-
+0. Install xcode command line utils and ACCEPT THE LICENSE!!!
+```
+xcodebuild -license
+```
 1. https://github.com/boxen/our-boxen
 2. This link seems to explain things a bit better: http://coffeecupblog.com/2013/03/24/automate-your-mac-provisioning-with-boxen-first-steps/
 
