@@ -9,9 +9,14 @@ __TODO List__
 
 1. Figure out how to replace the OS X stock equivalent of coreutils with the GNU variants (OS X shouldn't hide symlinks from the user). As a linux user, the default command line tools are lacking to say the least. - DONE (see below)
 2. Fork /opt/boxen/repo into my_boxen (this will likely cause script/boxen to complain about uncommited changes) - DONE but to my-boxen which is where you're reading this...
-3. Automate/write a boxen recipe that uses puppet to call homebrew to install python
+3. Automate/write a boxen recipe that uses puppet to call homebrew to install python - looks like you can do something in the manifests/site.pp file here.
 4. Automate/write a boxen recipe that uses puppet to call homebrew to install scapy
 5. Automate/write a boxen recipe that uses puppet to call homebrew to install the GNU utils
+6. Investigate the following:
+
+```
+Homebrew::Formula <| |> -> Package <| |>
+```
 
 __Setup Steps__
 
