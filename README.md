@@ -45,6 +45,26 @@ At this point you can edit Puppetfile to add things you might like:
 github "python",        "1.2.1"
 ```
 
+It is worth noting that once you add things to the Puppetfile you also need to add them to manifests/site.pp. The code to do so looks like this:
+
+```
+node default {
+ --- SNIP ---
+	# pull in custom packages that we added in puppetfile
+	include	macvim
+	include	alfred
+	include	virtualbox
+	include	iterm2
+	include	dropbox
+	include	chrome
+ --- SNIP ---
+  file { "${boxen::config::srcdir}/our-boxen":
+    ensure => link,
+    target => $boxen::config::repodir
+  }
+}
+``` 
+
 I found that the above did absolutely nothing to get me a newer python install, but the following worked as you'd expect:
 
 ```
