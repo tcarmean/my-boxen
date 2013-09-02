@@ -8,7 +8,7 @@ This repo will initially be a collection of notes and links to wrap my head arou
 __TODO List__
 
 1. Figure out how to replace the OS X stock equivalent of coreutils with the GNU variants (OS X shouldn't hide symlinks from the user). As a linux user, the default command line tools are lacking to say the least.
-2. Fork /opt/boxen/repo into my_boxen (this will likely cause script/boxen to complain about uncommited changes)
+2. Fork /opt/boxen/repo into my_boxen (this will likely cause script/boxen to complain about uncommited changes) - DONE but to my-boxen which is where you're reading this...
 
 __Setup Steps__
 
