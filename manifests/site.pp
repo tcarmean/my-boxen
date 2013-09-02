@@ -81,7 +81,7 @@ node default {
 	include	virtualbox
 #	include	iterm2
 	include	dropbox
-	include	chrome::stable
+	include	chrome
 
   # common, useful packages
   package {
