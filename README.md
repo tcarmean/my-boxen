@@ -13,6 +13,9 @@ __TODO List__
 4. Automate/write a boxen recipe that uses puppet to call homebrew to install scapy
 5. Automate/write a boxen recipe that uses puppet to call homebrew to install the GNU utils
 6. Create a dotfiles repo on github. Create per user manifest for github id tcarmean that points to tcarmean/dotfiles. See modules/people/README.md for info on how to do this.
+
+__Question__ How do you configure homebrew to use a tap via boxen?
+
 __Setup Steps__
 
 1. Install xcode command line utils and ACCEPT THE LICENSE!!!
