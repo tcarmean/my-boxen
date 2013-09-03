@@ -82,6 +82,7 @@ node default {
 #	include	iterm2
 	include	dropbox
 	include	chrome
+	include python
 
   # common, useful packages
   package {

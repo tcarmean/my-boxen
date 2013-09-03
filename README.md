@@ -8,23 +8,20 @@ This repo will initially be a collection of notes and links to wrap my head arou
 __TODO List__
 
 1. Figure out how to replace the OS X stock equivalent of coreutils with the GNU variants (OS X shouldn't hide symlinks from the user). As a linux user, the default command line tools are lacking to say the least. - DONE (see below)
-2. Fork /opt/boxen/repo into my_boxen (this will likely cause script/boxen to complain about uncommited changes) - DONE but to my-boxen which is where you're reading this...
+2. Fork /opt/boxen/repo into my-boxen (this will likely cause script/boxen to complain about uncommited changes) - DONE
 3. Automate/write a boxen recipe that uses puppet to call homebrew to install python - looks like you can do something in the manifests/site.pp file here.
 4. Automate/write a boxen recipe that uses puppet to call homebrew to install scapy
 5. Automate/write a boxen recipe that uses puppet to call homebrew to install the GNU utils
-6. Investigate the following:
-
-```
-Homebrew::Formula <| |> -> Package <| |>
-```
-
+6. Create a dotfiles repo on github. Create per user manifest for github id tcarmean that points to tcarmean/dotfiles. See modules/people/README.md for info on how to do this.
 __Setup Steps__
-0. Install xcode command line utils and ACCEPT THE LICENSE!!!
+
+1. Install xcode command line utils and ACCEPT THE LICENSE!!!
 ```
 xcodebuild -license
 ```
-1. https://github.com/boxen/our-boxen
-2. This link seems to explain things a bit better: http://coffeecupblog.com/2013/03/24/automate-your-mac-provisioning-with-boxen-first-steps/
+2. https://github.com/boxen/our-boxen
+3. This link seems to explain things a bit better: http://coffeecupblog.com/2013/03/24/automate-your-mac-provisioning-with-boxen-first-steps/
+4. This link also has good information: http://garylarizza.com/blog/2013/02/15/puppet-plus-github-equals-laptop-love/
 
 ```
 git clone https://github.com/boxen/our-boxen /opt/boxen/repo
@@ -34,8 +31,7 @@ git remote add origin git@github.com:tcarmean/my-boxen.git
 git push -u origin master
 script/boxen --no-fde
 ```
-This seems to pull in a bunch of stuff and sets up ~/src/our-boxen which appears to be where custom configurations on top of the defaults are meant to go. It appears that ~/src/our-boxen is a symlink to /opt/boxen/repo. 
-
+__TODO__ Figure out the order of operations and modify the steps above for staging a new machine from scratch. Do we clone from boxen/our-boxen or from tcarmean/my-boxen???
 ```
 dhcp84:our-boxen chong$ pwd
 /Users/chong/src/our-boxen
@@ -65,6 +61,7 @@ node default {
 	include	iterm2
 	include	dropbox
 	include	chrome
+	include python
  --- SNIP ---
   file { "${boxen::config::srcdir}/our-boxen":
     ensure => link,
@@ -72,12 +69,6 @@ node default {
   }
 }
 ``` 
-
-I found that the above did absolutely nothing to get me a newer python install, but the following worked as you'd expect:
-
-```
-brew install python
-```
 
 To get scapy:
 
@@ -87,6 +78,8 @@ brew install scapy
 ```
 
 This gets me a broken environment. Apparently homebrew didn't install all of the deps for scapy (this is a bit weird as it DID get me something usable outside of boxen).
+
+__TODO__ Reinvestigate setting up a proper GNU environment.
 
 To get the GNU set of tools in hopes that the command line will become a bit more like I'm used to from linux:
 
