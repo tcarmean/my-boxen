@@ -84,6 +84,13 @@ node default {
 	include	chrome
 	include python
 
+	# install packages for scapy
+	package { 'scapy':
+		ensure => present,
+		require => Package['libdnet',
+			'libtool']
+	}
+
   # common, useful packages
   package {
     [
