@@ -87,8 +87,7 @@ node default {
 	# install packages for scapy
 	package { 'scapy':
 		ensure => present,
-		require => Package['libdnet',
-			'libtool']
+		require => Package['libdnet']
 	}
 
   # common, useful packages
