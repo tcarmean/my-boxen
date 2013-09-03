@@ -13,6 +13,7 @@ __TODO List__
 4. Automate/write a boxen recipe that uses puppet to call homebrew to install scapy
 5. Automate/write a boxen recipe that uses puppet to call homebrew to install the GNU utils
 6. Investigate the following:
+7. Have a look at puppet-template to use as a scapy template. It looks like you can straight up exec stuff to add the tap and then simply brew install scapy once the tap is in place.
 
 ```
 Homebrew::Formula <| |> -> Package <| |>
