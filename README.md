@@ -12,12 +12,8 @@ __TODO List__
 3. Automate/write a boxen recipe that uses puppet to call homebrew to install python - looks like you can do something in the manifests/site.pp file here.
 4. Automate/write a boxen recipe that uses puppet to call homebrew to install scapy
 5. Automate/write a boxen recipe that uses puppet to call homebrew to install the GNU utils
-6. Investigate the following:
-7. Have a look at puppet-template to use as a scapy template. It looks like you can straight up exec stuff to add the tap and then simply brew install scapy once the tap is in place.
+6. Have a look at puppet-template to use as a scapy template. It looks like you can straight up exec stuff to add the tap and then simply brew install scapy once the tap is in place.
 
-```
-Homebrew::Formula <| |> -> Package <| |>
-```
 
 __Setup Steps__
 0. Install xcode command line utils and ACCEPT THE LICENSE!!!
