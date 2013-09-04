@@ -85,10 +85,10 @@ node default {
 	include python
 
 	# install packages for scapy
-	package { 'scapy':
-		ensure => present,
-		require => Package['libdnet']
-	}
+#	package { 'scapy':
+#		ensure => present,
+#		require => Package['libdnet']
+#	}
 
   # common, useful packages
   package {
