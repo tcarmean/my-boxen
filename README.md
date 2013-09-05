@@ -16,13 +16,18 @@ __TODO List__
 6. Have a look at puppet-template to use as a scapy template. It looks like you can straight up exec stuff to add the tap and then simply brew install scapy once the tap is in place.
 
 __Question__ How do you configure homebrew to use a tap via boxen?
-
+__Answer__
+https://github.com/boxen/puppet-homebrew/commit/9f4e5133e2002f2f40c02490b9555519bbda55b1
 https://gist.github.com/nanliu/5112530
 
 ```
-package { 'samueljohn/python/scapy':
-	ensure => present,
-	require => Homebrew::Tap['samueljohn/python'],
+class scapy {
+	homebrew::tap { 'samueljohn/python': }
+
+	package {
+		'samueljohn/python/scapy':
+			ensure => installed,
+	}
 }
 ```
 

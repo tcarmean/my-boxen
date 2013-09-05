@@ -63,6 +63,13 @@ class scapy {
 	}
 }
 
+class libdnet {
+	package {
+		'libdnet':
+			ensure => installed,
+			install_options => '--with-python',
+	}
+}
 
 node default {
   # core modules, needed for most things
