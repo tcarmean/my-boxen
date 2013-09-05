@@ -56,6 +56,8 @@ Homebrew::Formula <| |> -> Package <| |>
 
 class scapy {
 	homebrew::tap { 'samueljohn/python': }
+	require libdnet
+	require pylibpcap
 	
 	package {
 		'samueljohn/python/scapy':
@@ -113,8 +115,8 @@ node default {
 #	include	chrome
 #	include python
 	include scapy
-	include libdnet
-	include pylibpcap
+#	include libdnet
+#	include pylibpcap
 
   # common, useful packages
   package {
