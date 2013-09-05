@@ -20,9 +20,11 @@ __Question__ How do you configure homebrew to use a tap via boxen?
 __Setup Steps__
 
 1. Install xcode command line utils and ACCEPT THE LICENSE!!!
+
 ```
 xcodebuild -license
 ```
+
 2. https://github.com/boxen/our-boxen
 3. This link seems to explain things a bit better: http://coffeecupblog.com/2013/03/24/automate-your-mac-provisioning-with-boxen-first-steps/
 4. This link also has good information: http://garylarizza.com/blog/2013/02/15/puppet-plus-github-equals-laptop-love/
