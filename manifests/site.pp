@@ -71,6 +71,15 @@ class libdnet {
 	}
 }
 
+class pylibpcap {
+	homebrew::tap { 'tcarmean/pylibpcap': }
+
+	package {
+		'tcarmean/pylibpcap/pylibpcap':
+		ensure => installed,
+	}
+}
+
 node default {
   # core modules, needed for most things
   include dnsmasq
@@ -105,6 +114,7 @@ node default {
 #	include python
 	include scapy
 	include libdnet
+	include pylibpcap
 
   # common, useful packages
   package {
