@@ -54,10 +54,10 @@ Homebrew::Formula <| |> -> Package <| |>
 # now i'm just trying stuff...
 # Trying to manually run
 
-Package { 'libdnet':
-	provider => homebrew,
-	require => 'python',
-}
+#Package { 'libdnet':
+#	provider => homebrew,
+#	require => 'python',
+#}
 
 Package { 'samueljohn/python/scapy':
 	ensure => present,
