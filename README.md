@@ -78,8 +78,13 @@ To get scapy:
 
 ```
 brew tap samueljohn/python
+brew install libdnet --with-python
 brew install scapy
 ```
+We are going to need to write a formula to install the python interface to libpcap. This lib comes default on OS X so we don't need to do much there. What look at the following link...
+
+https://gist.github.com/benhagen/5257516
+
 
 This gets me a broken environment. Apparently homebrew didn't install all of the deps for scapy (this is a bit weird as it DID get me something usable outside of boxen).
 
