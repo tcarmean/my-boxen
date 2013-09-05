@@ -17,6 +17,15 @@ __TODO List__
 
 __Question__ How do you configure homebrew to use a tap via boxen?
 
+https://gist.github.com/nanliu/5112530
+
+```
+package { 'samueljohn/python/scapy':
+	ensure => present,
+	require => Homebrew::Tap['samueljohn/python'],
+}
+```
+
 __Setup Steps__
 
 1. Install xcode command line utils and ACCEPT THE LICENSE!!!
