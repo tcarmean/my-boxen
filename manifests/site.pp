@@ -54,7 +54,7 @@ Homebrew::Formula <| |> -> Package <| |>
 # now i'm just trying stuff...
 # Trying to manually run
 
-Package { 'libdnet --with-python':
+Package { 'libdnet':
 	provider => homebrew,
 	require => 'python',
 }
