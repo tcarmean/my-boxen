@@ -61,6 +61,7 @@ class scapy {
 		'samueljohn/python/scapy':
 			ensure => installed,
 	}
+	require => Package['libdnet']
 }
 
 class libdnet {
