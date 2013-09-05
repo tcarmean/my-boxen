@@ -37,14 +37,15 @@ git remote add origin git@github.com:tcarmean/my-boxen.git
 git push -u origin master
 script/boxen --no-fde
 ```
-__TODO__ Figure out the order of operations and modify the steps above for staging a new machine from scratch. Do we clone from boxen/our-boxen or from tcarmean/my-boxen???
+
+Staging a new machine from my-boxen:
+
 ```
-dhcp84:our-boxen chong$ pwd
-/Users/chong/src/our-boxen
-dhcp84:our-boxen chong$ ls
-Gemfile         Puppetfile      bin             lib             modules         vendor
-Gemfile.lock    Puppetfile.lock config          log             script
-LICENSE         README.md       docs            manifests       shared
+sudo mkdir -p /opt/boxen
+sudo chown ${USER}:staff /opt/boxen
+git clone https://github.com/tcarmean/my-boxen.git /opt/boxen/repo
+cd /opt/boxen/repo
+script/boxen
 ```
 
 At this point you can edit Puppetfile to add things you might like:
@@ -87,8 +88,6 @@ We are going to need to write a formula to install the python interface to libpc
 
 https://gist.github.com/benhagen/5257516
 
-
-This gets me a broken environment. Apparently homebrew didn't install all of the deps for scapy (this is a bit weird as it DID get me something usable outside of boxen).
 
 __TODO__ Reinvestigate setting up a proper GNU environment.
 
