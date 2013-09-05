@@ -54,7 +54,7 @@ Homebrew::Formula <| |> -> Package <| |>
 # now i'm just trying stuff...
 # Trying to manually run
 Exec {
-	group	=> 'staff',
+#	group	=> 'staff',
 	logoutput	=> on_failure,
 	user	=> $boxen_user,
 
