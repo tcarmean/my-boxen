@@ -53,9 +53,19 @@ Homebrew::Formula <| |> -> Package <| |>
 
 # now i'm just trying stuff...
 # Trying to manually run
-Exec {
-	command	=> "brew tap samueljohn/python"
+
+Package { 'libdnet --with-python':
+	provider => homebrew,
+	require => 'python',
 }
+
+Package { 'samueljohn/python/scapy':
+	ensure => present,
+	require => Homebrew::Tap['samueljohn/python'],
+}
+
+
+
 
 node default {
   # core modules, needed for most things
