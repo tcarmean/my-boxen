@@ -54,17 +54,14 @@ Homebrew::Formula <| |> -> Package <| |>
 # now i'm just trying stuff...
 # Trying to manually run
 
-#Package { 'libdnet':
-#	provider => homebrew,
-#	require => 'python',
-#}
-
-Package {
-	ensure => present,
-	require => Homebrew::Tap['samueljohn/python']
+class scapy {
+	homebrew::tap { 'samueljohn/python': }
+	
+	package {
+		'samueljohn/python/scapy':
+			require => 'python'
+	}
 }
-
-
 
 
 node default {
@@ -99,12 +96,7 @@ node default {
 #	include	dropbox
 #	include	chrome
 #	include python
-
-	# install packages for scapy
-#	package { 'scapy':
-#		ensure => present,
-#		require => Package['libdnet']
-#	}
+	include scapy
 
   # common, useful packages
   package {
