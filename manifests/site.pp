@@ -59,7 +59,7 @@ Homebrew::Formula <| |> -> Package <| |>
 #	require => 'python',
 #}
 
-Package { 'samueljohn/python/scapy':
+Package { 'scapy':
 	ensure => present,
 	require => Homebrew::Tap['samueljohn/python']
 }
