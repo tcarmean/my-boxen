@@ -61,7 +61,6 @@ class scapy {
 		'samueljohn/python/scapy':
 			ensure => installed,
 	}
-	require => Package['libdnet']
 }
 
 class libdnet {
@@ -105,6 +104,7 @@ node default {
 #	include	chrome
 #	include python
 	include scapy
+	include libdnet
 
   # common, useful packages
   package {
