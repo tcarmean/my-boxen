@@ -54,21 +54,7 @@ Homebrew::Formula <| |> -> Package <| |>
 # now i'm just trying stuff...
 # Trying to manually run
 Exec {
-#	group	=> 'staff',
-	logoutput	=> on_failure,
-	user	=> $boxen_user,
-
-	path	=> [
-    "${boxen::config::home}/homebrew/bin",
-	],
-
-	environment => [
-		"HOMEBREW_CACHE=${homebrew::config::cachedir}",
-    "HOME=/Users/${::boxen_user}"
-	],
-
 	command	=> "brew tap samueljohn/python"
-
 }
 
 node default {
