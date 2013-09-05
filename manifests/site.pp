@@ -59,7 +59,7 @@ class scapy {
 	
 	package {
 		'samueljohn/python/scapy':
-			require => 'python'
+			ensure => installed,
 	}
 }
 
