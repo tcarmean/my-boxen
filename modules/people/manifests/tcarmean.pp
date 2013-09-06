@@ -8,7 +8,7 @@ class people::tcarmean {
     }
 
     repository { $dotfiles:
-        source  => 'tcarmean/dotfiles'
+        source  => 'tcarmean/dotfiles',
         require => File[$my]
     }
 }
