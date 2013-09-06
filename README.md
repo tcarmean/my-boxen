@@ -10,7 +10,7 @@ __TODO List__
 1. Figure out how to replace the OS X stock equivalent of coreutils with the GNU variants (OS X shouldn't hide symlinks from the user). As a linux user, the default command line tools are lacking to say the least. - DONE (see below)
 2. Fork /opt/boxen/repo into my-boxen (this will likely cause script/boxen to complain about uncommited changes) - DONE
 3. Automate/write a boxen recipe that uses puppet to call homebrew to install python - looks like you can do something in the manifests/site.pp file here.
-4. Automate/write a boxen recipe that uses puppet to call homebrew to install scapy
+4. Automate/write a boxen recipe that uses puppet to call homebrew to install scapy - DONE (see below)
 5. Automate/write a boxen recipe that uses puppet to call homebrew to install the GNU utils
 6. Create a dotfiles repo on github. Create per user manifest for github id tcarmean that points to tcarmean/dotfiles. See modules/people/README.md for info on how to do this.
 6. Have a look at puppet-template to use as a scapy template. It looks like you can straight up exec stuff to add the tap and then simply brew install scapy once the tap is in place.
