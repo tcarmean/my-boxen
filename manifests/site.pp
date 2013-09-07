@@ -107,12 +107,12 @@ node default {
   include ruby::2_0_0
 
 	# pull in custom packages that we added in puppetfile
-#	include	macvim
-#	include	alfred
-#	include	virtualbox
+	include	macvim
+	include	alfred
+	include	virtualbox
 	include	iterm2::stable
-#	include	dropbox
-#	include	chrome
+	include	dropbox
+	include	chrome
 	include scapy
 
   # common, useful packages
