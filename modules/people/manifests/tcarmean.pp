@@ -12,14 +12,14 @@ class people::tcarmean {
         require => File[$my]
     }
 
-	file { '${home}/.bash_profile':
+	file { "${home}/.bash_profile":
 		ensure => link,
-		target => '$dotfiles/.bash_profile'
+		target => "${dotfiles}/.bash_profile"
 	}
 
-	file { '${home}/.bashrc':
+	file { "${home}/.bashrc":
 		ensure => link,
-		target => '$dotfiles/.bashrc'
+		target => "$dotfiles/.bashrc"
 	}
 		
 }
