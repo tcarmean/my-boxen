@@ -110,7 +110,7 @@ node default {
 #	include	macvim
 #	include	alfred
 #	include	virtualbox
-#	include	iterm2
+	include	iterm2::stable
 #	include	dropbox
 #	include	chrome
 	include scapy
