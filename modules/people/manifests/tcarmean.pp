@@ -19,7 +19,16 @@ class people::tcarmean {
 
 	file { "${home}/.bashrc":
 		ensure => link,
-		target => "$dotfiles/.bashrc"
+		target => "${dotfiles}/.bashrc"
 	}
-		
+	
+	file { "${home}/.vim":
+		ensure => link,
+		target => "${dotfiles}/.vim"
+	}
+
+	file { "${home}/.vimrc":
+		ensure => link,
+		target => "${dotfiles}/.vim/vimrc"
+	}		
 }
