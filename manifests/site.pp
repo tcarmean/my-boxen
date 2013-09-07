@@ -113,6 +113,7 @@ node default {
 	include	iterm2::stable
 	include	dropbox
 	include	chrome
+	include vagrant
 	include scapy
 
   # common, useful packages
