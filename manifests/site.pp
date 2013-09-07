@@ -122,7 +122,8 @@ node default {
       'ack',
       'findutils',
       'gnu-tar',
-	'python'
+	'python',
+	'coreutils'
     ]:
   }
 
