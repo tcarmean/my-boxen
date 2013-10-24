@@ -116,6 +116,10 @@ node default {
 	include vagrant
 	include scapy
 
+# Attempt to install vagrant-windows
+vagrant::plugin { 'vagrant-windows':
+}
+
   # common, useful packages
   package {
     [
