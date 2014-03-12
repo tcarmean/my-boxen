@@ -115,6 +115,7 @@ node default {
 	include	chrome
 	include vagrant
 	include scapy
+    include skype
 
 # Attempt to install vagrant-windows
 vagrant::plugin { 'vagrant-windows':
