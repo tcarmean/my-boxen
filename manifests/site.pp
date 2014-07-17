@@ -117,9 +117,9 @@ node default {
 	include scapy
     include skype
 
-# Attempt to install vagrant-windows
-vagrant::plugin { 'vagrant-windows':
-}
+# Attempt to install vagrant-windows plugin (Note: vagrant-windows is rolled into v1.6+)
+#vagrant::plugin { 'vagrant-windows':
+#}
 
   # common, useful packages
   package {
