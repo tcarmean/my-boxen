@@ -23,37 +23,38 @@ end
 
 # Shortcut for a module under development
 def dev(name, *args)
-  mod name, :path => "#{ENV['HOME']}/src/boxen/puppet-#{name}"
+  mod "puppet-#{name}", :path => "#{ENV['HOME']}/src/boxen/puppet-#{name}"
 end
 
 # Includes many of our custom types and providers, as well as global
 # config. Required.
 
-github "boxen", "3.7.0"
+github "boxen", "3.11.0"
 
 # Support for default hiera data in modules
 
-github "module_data", "0.0.3", :repo => "ripienaar/puppet-module-data"
+github "module_data", "0.0.4", :repo => "ripienaar/puppet-module-data"
 
 # Core modules for a basic development environment. You can replace
 # some/most of these if you want, but it's not recommended.
 
-github "dnsmasq",     "2.0.0"
+github "brewcask",    "0.0.6"
+github "dnsmasq",     "2.0.1"
 github "foreman",     "1.2.0"
-github "gcc",         "2.2.0"
-github "git",         "2.5.0"
-github "go",          "1.1.0"
-github "homebrew",    "1.9.5"
-github "hub",         "1.3.0"
-github "inifile",     "1.1.1", :repo => "puppetlabs/puppetlabs-inifile"
-github "nginx",       "1.4.3"
-github "nodejs",      "3.8.1"
+github "gcc",         "3.0.2"
+github "git",         "2.7.92"
+github "go",          "2.1.0"
+github "homebrew",    "1.13.0"
+github "hub",         "1.4.1"
+github "inifile",     "1.4.1", :repo => "puppetlabs/puppetlabs-inifile"
+github "nginx",       "1.4.6"
+github "nodejs",      "5.0.0"
 github "openssl",     "1.0.0"
-github "phantomjs",   "2.3.0"
+github "phantomjs",   "3.0.0"
 github "pkgconfig",   "1.0.0"
-github "repository",  "2.3.0"
-github "ruby",        "8.1.4"
-github "stdlib",      "4.2.1", :repo => "puppetlabs/puppetlabs-stdlib"
+github "repository",  "2.4.1"
+github "ruby",        "8.5.2"
+github "stdlib",      "4.7.0", :repo => "puppetlabs/puppetlabs-stdlib"
 github "sudo",        "1.0.0"
 github "xquartz",     "1.2.1"
 
@@ -68,3 +69,4 @@ github "chrome"
 github "vagrant"
 github "skype"
 github "osx"
+
