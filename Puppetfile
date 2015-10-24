@@ -61,12 +61,8 @@ github "xquartz",     "1.2.1"
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.
 github "macvim"
-github "virtualbox"
-github "alfred"
 github "iterm2"
 github "dropbox"
 github "chrome"
-github "vagrant"
-github "skype"
 github "osx"
 
