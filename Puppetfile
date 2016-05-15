@@ -63,6 +63,5 @@ github "xquartz",     "1.2.1"
 github "macvim"
 github "iterm2"
 github "dropbox"
-github "chrome"
 github "osx"
 

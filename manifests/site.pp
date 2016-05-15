@@ -51,37 +51,6 @@ Service {
 
 Homebrew::Formula <| |> -> Package <| |>
 
-# now i'm just trying stuff...
-# Trying to manually run
-
-#class scapy {
-#	homebrew::tap { 'samueljohn/python': }
-#	require libdnet
-#	require pylibpcap
-#	
-#	package {
-#		'samueljohn/python/scapy':
-#			ensure => installed,
-#	}
-#}
-
-#class libdnet {
-#	package {
-#		'libdnet':
-#			ensure => installed,
-#			install_options => '--with-python',
-#	}
-#}
-
-#class pylibpcap {
-#	homebrew::tap { 'tcarmean/pylibpcap': }
-#
-#	package {
-#		'tcarmean/pylibpcap/pylibpcap':
-#		ensure => installed,
-#	}
-#}
-
 node default {
   # core modules, needed for most things
   include dnsmasq
@@ -109,11 +78,7 @@ node default {
 	include	macvim
 	include	iterm2::stable
 	include	dropbox
-	include	chrome
 
-# Attempt to install vagrant-windows plugin (Note: vagrant-windows is rolled into v1.6+)
-#vagrant::plugin { 'vagrant-windows':
-#}
 
   # common, useful packages
   package {
