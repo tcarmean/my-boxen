@@ -64,4 +64,5 @@ github "macvim"
 github "iterm2"
 github "dropbox"
 github "osx"
+qslug "lastpass"
 

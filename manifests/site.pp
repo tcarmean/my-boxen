@@ -78,6 +78,7 @@ node default {
 	include	macvim
 	include	iterm2::stable
 	include	dropbox
+	include lastpass
 
 
   # common, useful packages
