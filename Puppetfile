@@ -64,5 +64,5 @@ github "macvim"
 github "iterm2"
 github "dropbox"
 github "osx"
-qslug "lastpass"
+github "lastpass", :repo => "qslug/puppet-lastpass"
 
